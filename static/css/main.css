@@ -41,3 +41,375 @@ button:hover{
     padding:20px;
     border-radius: 10px;
 }
+
+.profile{
+    position: relative;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-template-rows: 100px 60px 180px;
+    grid-template-areas: "image" "name" "bio";
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  
+    background-color: #fff;
+  }
+  /* perfect*/
+  .pro{
+    position: relative;
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 200px 60px 100px;
+    grid-template-areas: "image" "tex" "texts";
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+  }
+  
+  .pro-image{
+    grid-area: image;
+    background-size: cover; 
+    background-position: cover;
+    background: linear-gradient(rgba(49, 46, 46, 0.7),rgba(228, 214, 214, 0.5)),url("/images/image2.png "
+    ) no-repeat;
+  }
+  .pro-tex{
+    grid-area: tex;
+  
+    margin-left: 10px;
+    color:gray;
+    margin-top: 20px;
+  }
+  .pro-text h4{
+    color: gray;
+  }
+  .pro-texts{
+    grid-area: texts;
+  }
+  .pro-texts p{
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  .profile img{
+    position: absolute;
+    width: 100px;
+    border-radius: 50%;
+    top: -32px;
+      left: 80px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  
+  }
+  .profile:hover{
+    transform: scale(0.9);
+  }
+  .image{
+    position: relative;
+    grid-area: image;
+    border-top:6px solid dodgerblue;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .imag{
+    position: relative;
+    grid-area: image;
+    border-top:6px solid pink;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .ima{
+    position: relative;
+    grid-area: image;
+    border-top:6px solid red;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  .name{
+    grid-area: name;
+    text-align:center ;
+    justify-content: center;
+    align-items: center;
+  }
+  .name p{
+    font-size: 11px;
+  }
+  .name h5{
+    font-weight: bolder;
+    font-size: 16px;
+  }
+  .bio{
+    grid-area: bio;
+    text-align: center;
+  }
+  
+  
+  .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:20px;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+  }
+  .card{
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+      padding:10px;
+      margin:10px;
+      color:#333;
+  }
+  .flex{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+  }
+  .container{
+      max-width: 1100px;
+      margin:0 auto;
+      padding:0 40px;
+  }
+  .grid-3{
+      grid-template-columns: repeat(3,1fr );
+  }
+  .grid-4{
+    grid-template-columns: repeat(4,1fr );
+  }
+  
+  .grid-5{
+    grid-template-columns: repeat(4,1fr );
+    display: grid;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    max-width: 600px;
+  
+    margin:0 auto;
+  
+  
+  }
+  .grid-7{
+    grid-template-columns: repeat(5,1fr );
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap:6px;
+    margin:0 auto;
+    margin-top:50px;
+    margin-left:120px;
+  
+  
+  }
+  .grid-6{
+    margin-top: 80px;
+    grid-template-columns: repeat(6,1fr );
+    gap:30px;
+  }
+  .text-center{
+      text-align: center;
+  }
+  /*margin*/
+  .my-1{
+    margin: 1rem 0;
+  }
+  .my-2{
+    margin: 1.5rem 0;
+      
+  }
+  .my-3{
+    margin: 2rem 0;
+      
+  }
+  .my-4{
+    margin: 3rem 0;
+      
+  }
+  .my-5{
+    margin: 4rem 0;
+      
+  }
+  .m-1{
+      margin: 1rem 0;
+    }
+    .m-2{
+      margin: 1.5rem 0;
+        
+    }
+    .m-3{
+      margin: 2rem 0;
+        
+    }
+    .m-4{
+      margin: 3rem 0;
+        
+    }
+    .m-5{
+      margin: 4rem 0;
+        
+    }
+  /*padding*/
+  
+   .py-1{
+      padding: 1rem 0;
+    }
+    .py-2{
+      padding: 1.5rem 0;
+        
+    }
+    .py-3{
+      padding: 2rem 0;
+        
+    }
+    .py-4{
+      padding: 3rem 0;
+        
+    }
+    .py-5{
+      padding: 4rem 0;
+        
+    }
+    .p-1{
+      padding: 1rem 0;
+    }
+    .p-2{
+      padding: 1.5rem 0;
+        
+    }
+    .p-3{
+      padding: 2rem 0;
+        
+    }
+    .p-4{
+      padding: 3rem 0;
+        
+    }
+    .p-5{
+      padding: 4rem 0;
+        
+    }
+    /*backgrounds and coloured buttons*/
+    .bg-primary a,
+    .btn-primary a,
+    .bg-secondary a,
+    .btn-secondary a,
+    .bg-dark a,
+    .btn-dark a{
+        color:#fff;
+    }
+  
+  
+  
+  
+    .bg-primary,
+    .btn-primary{
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .bg-secondary,
+    .btn-secondary{
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+    .bg-dark,
+    .btn-dark{
+        background-color: var(--dark-color);
+        color: #fff;
+    }
+    .bg-light,
+    .btn-light{
+        background-color: var(--light-color);
+        color: #333;
+    }
+  
+    /* text sizes*/
+  
+  
+    .alert{
+      background-color: var(--light-color);
+      padding: 10px 20px;
+      font-weight: bold;
+      margin:15px 0;
+    }
+    .alert i{
+      margin-right: 10px;
+    }
+    .alert-success{
+      background-color: var(--success-color);
+      color:#fff;
+  
+    }
+    
+    /* text-colors*/
+    .text-primary{
+      color:var(--primary-color)
+    }
+    .lead{
+        font-size: 20px;
+    }
+    .sm{
+        font-size: 1rem;
+    }
+    .md{
+        font-size: 2rem;
+    }
+    .lg{
+        font-size: 3rem;
+    }
+    .xl{
+        font-size: 4rem;
+    }
+  
+  
+    /*cards*/
+  
+    .cards{
+      display: grid;
+      grid-template-columns: 300px;
+      grid-template-rows: 210px 80px 80px;
+      grid-template-areas: "image" "text" "texts";
+      font-family: roboto;
+      
+  }
+  .cards-image{
+    grid-area: image;
+  
+    background-size: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-position: cover;
+    background: linear-gradient(rgba(49, 46, 46, 0.7),rgba(228, 214, 214, 0.5)),url("/images/image2.png "
+    ) no-repeat;
+  }
+  .cards-text{
+    grid-area:text;
+    margin:25px;
+  }
+  
+  .cards-text p{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .cards-texts{
+    grid-area: texts;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+   
+  }
+  
+  
+  .cards-texts .stat{
+    text-align: center;
+  }
+  .cards-texts .sta{
+    text-align: center;
+  }
