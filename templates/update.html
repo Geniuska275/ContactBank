@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>Contacts Master</title>
+
+{% endblock%}
+{% block body %}
+<h1>Update  {{update.firstname}}'s contacts</h1>
+
+<div class="card">
+  <form action="/update/{{update.id}}" method="POST">
+    <label>FirstName:</label><br>
+  <input type="text" value={{update.firstname}} placeholder="first-name" name="firstname" id="firstname"><br><br>
+    <label>LastName:</label><br>
+  <input type="text" value={{update.lastname}} placeholder="last-name" name="lastname" id="lastname"><br><br>
+  <label>Contact:</label><br>
+  <input type="text" value={{update.number}} placeholder="enter contact" name="number" id="contact"><br><br>
+  <input type="submit" value="Update Contacts" class="submit">
+</form>
+</div>
+
+{% endblock %}

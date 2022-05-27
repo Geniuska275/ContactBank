@@ -1,0 +1,69 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>Contacts Master</title>
+
+{% endblock%}
+{% block body %}
+<h1>CONTACTS BOOK</h1>
+{%if message|safe %}
+  <h5>{{messages}}</h5>
+
+  {%endif%}
+<div>
+  <table>
+    <tr>
+      <th>S/N</th>
+      <th>FIRSTNAME</th>
+      <th>LASTNAME</th>
+      <th>CONTACT</th>
+      <th>DATE_CREATED</th>
+      <th></th>
+      <th></th>
+
+    </tr>
+    {% for contact in contacts%}
+    <tr>
+      <td>{{contact.id}}</td>
+      <td>{{contact.firstname}}</td>
+      <td>{{contact.lastname}}</td>
+      <td>{{contact.number}}</td>
+      
+      <td>{{contact.Date_created}}</td>
+      <td><a href="/delete/{{contact.id}}"><button>delete</button></a>
+      <td><a href="/update/{{contact.id}}"><button>Edit</button></a>
+
+    
+      </td>
+
+    </tr>
+
+    {%endfor%}
+  </table>
+</div>
+<hr>
+<div class="card">
+  {%if message|safe %}
+  <h5>{{message}}</h5>
+
+  {%endif%}
+  <form action="/" method="POST">
+    <label>FirstName:</label><br>
+  <input type="text" placeholder="first-name" name="firstname" id="firstname"><br><br>
+    <label>LastName:</label><br>
+  <input type="text" placeholder="last-name" name="lastname" id="lastname"><br><br>
+  <label>Contact:</label><br>
+  <input type="text" placeholder="enter contact" name="number" id="contact"><br><br>
+  <input type="submit" value="Add Contacts" class="submit">
+</form>
+</div>
+
+<form action="/search/:search" method="POST">
+  
+<input type="text" placeholder="search contact..." name="search" class="search"><br><br>
+<input type="submit" value="search" class="submit">
+</form>
+</div>
+
+{% endblock %}
