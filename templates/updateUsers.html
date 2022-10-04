@@ -1,0 +1,101 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>Contacts Master</title>
+
+{% endblock%}
+{% block body %}
+<h4>Welcome to ContactsBank!  Save your contacts to the Cloud.</h4>
+    <!---navbar--> 
+    <nav class="navbar">
+      <a href="/" style="text-decoration: none;color: black;"> <div class="brand-title">ContactsBank.</div></a>
+      
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/Contacts">Contacts</a></li>
+                <li><a href="/AddContacts">AddContacts</a></li>
+                <li><a href="/Users">Users</a></li>
+                <li><a href="/About">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--mode-->
+    
+    <div class="whats">
+        <label  class="switch" >
+            <input type="checkbox" class="clicked">
+            <span class="slider"></span>
+        </label>
+      </div>
+<h1 style="text-align: center;margin-top: 40px;font-weight: bold;">Update  {{user.username}}'s contacts</h1>
+<div class="addcontact">
+  <div class="card add">
+  <h2 class="logo">ContactsBank.</h2>
+  <div class="imag">
+  
+  </div>
+  <form action="/updateUser/{{user.id}}"  class="forma" method="POST">
+    <div class="form-group"> 
+      <input type="text" value={{user.username}}  name="username" id="firstname">
+  </div><br><br>
+  <div class="form-group">
+
+    <input type="text" value={{user.email}}  name="email" id="lastname">
+  </div><br><br>
+  <div class="form-group">
+      <input type="text" value={{user.passcode}}  name="passcode" id="contact">
+  </div><br><br>
+  <input type="submit" value="Edit User" class="submit">
+
+</form>
+</div>
+</div>
+
+<!---footer-->
+<div class="foot">
+
+  <div class=" grid grid-3 container mt-3">
+      <div>
+          <h3 style="color:orangered;opacity: 0.6;">ContactsBank</h3>
+          <p>Bank Your Contacts.</p>
+      </div>
+      <div>
+        <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Quick Links</h6>
+
+        <nav>
+
+          <ul>
+              <li>hiii</li>
+              <li>hdhdhhdh</li>
+              <li>hsjhshshh</li>
+              <li>jjdjdjd</li>
+          </ul>
+
+        </nav>
+      </div>
+      <div>
+        <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Social Media</h6>
+          <ul>
+              <li>heloo</li>
+              <li>kdkdkdk</li>
+              <li>ldlld</li>
+              <li>kskdkkdk</li>
+  
+          </ul>
+      </div>
+  
+      <div style="text-align: center;margin-left:80px;margin-top: 30px;">
+          <p>Designed By KINGSLEY AIGOJIE &copy;2022</p>
+       </div>
+  
+  </div>
+  </div>
+  
+
+{% endblock %}

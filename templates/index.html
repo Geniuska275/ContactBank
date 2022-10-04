@@ -6,64 +6,123 @@
 
 {% endblock%}
 {% block body %}
-<h1>CONTACTS BOOK</h1>
+
+
+<h4>Welcome to ContactsBank!  Save your contacts to the Cloud.</h4>
+    <!---navbar--> 
+    <nav class="navbar">
+        <div class="brand-title">ContactsBank.</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/Contacts">Contacts</a></li>
+                <li><a href="/AddContacts">AddContacts</a></li>
+                <li><a href="/users/add">AddUsers</a></li>
+                <li><a href="/Users">Users</a></li>
+                <li><a href="/About">About</a></li>
+                <li><a href="/profile">Profile</a></li>
+
+            </ul>
+        </div>
+     
+    <div class="g" style="box-shadow:5px 5px 15px rgba(17,47,216,0.2);border-radius: 50px;padding: 10px;">
+        <form class="suc" method="POST" action="/search">
+          <input style="padding: 10px;" name="searched" placeholder="Search a User..." aria-label="Search">
+          <button class="success" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+      </div>
+      <a href="/logout"><button class="navbtn">logout</button></a>
+    </nav>
+    <!--mode-->
+    
+      <div class="whats">
+        <label  class="switch" >
+            <input type="checkbox" class="clicked">
+            <span class="slider"></span>
+        </label>
+      </div>
+      <div class="lengths">
+        <span style="color:orangered">{{lengths}}</span>
+      </div>
 {%if message|safe %}
   <h5>{{messages}}</h5>
 
   {%endif%}
-<div>
-  <table>
-    <tr>
-      <th>S/N</th>
-      <th>FIRSTNAME</th>
-      <th>LASTNAME</th>
-      <th>CONTACT</th>
-      <th>DATE_CREATED</th>
-      <th></th>
-      <th></th>
-
-    </tr>
-    {% for contact in contacts%}
-    <tr>
-      <td>{{contact.id}}</td>
-      <td>{{contact.firstname}}</td>
-      <td>{{contact.lastname}}</td>
-      <td>{{contact.number}}</td>
-      
-      <td>{{contact.Date_created.date()}}</td>
-      <td><a href="/delete/{{contact.id}}"><button>delete</button></a>
-      <td><a href="/update/{{contact.id}}"><button>Edit</button></a>
-
-    
-      </td>
-
-    </tr>
-
-    {%endfor%}
-  </table>
-</div>
-<hr>
-<div class="card">
-  {%if message|safe %}
-  <h5>{{message}}</h5>
-
-  {%endif%}
-  <form action="/" method="POST">
-    <label>FirstName:</label><br>
-  <input type="text" placeholder="first-name" name="firstname" id="firstname"><br><br>
-    <label>LastName:</label><br>
-  <input type="text" placeholder="last-name" name="lastname" id="lastname"><br><br>
-  <label>Contact:</label><br>
-  <input type="text" placeholder="enter contact" name="number" id="contact"><br><br>
-  <input type="submit" value="Add Contacts" class="submit">
-</form>
-</div>
-
-<form action="/search/:search" method="POST">
+  <h2>Welcome,{{user}}</h2>
   
-<input type="text" placeholder="search contact..." name="search" class="search"><br><br>
-<input type="submit" value="search" class="submit">
-</form>
+
+<div>
+  <div class=" container  grid-3" style="margin-top: 20px;">
+    {% for contact in contacts%}
+  <div class="contact">
+    
+    <a href="https://wa.me/{{contact.number}}" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+    <h1>{{contact.firstname.upper()}} {{contact.lastname.upper()}}</h1>
+    <h2>{{contact.number}}</h2>
+    <small>Date_added:{{contact.Date_Created.date()}}</small><br>
+    <small style="font-weight:900 ;">Stack :{{contact.stack.capitalize()}}</small>
+
+
+    <div class="b">
+        <a href="tel:{{contact.number}}"><button class="btn"><i class="fa fa-phone"></i></button></a>
+        <td><a href="/delete/{{contact.id}}"><button id="te"><i class="fa fa-trash"></i></button></a>
+            
+            
+            <a href="/update/{{contact.id}}"><button class="btn"><i class="fa fa-edit"></i></button></a>
+    </div>
+
+  </div>
+  {%endfor%}
 </div>
+</div>
+
+
+
+
+<!---footer-->
+<div class="foot">
+
+  <div class=" grid grid-3 container mt-3">
+      <div>
+          <h3 style="color:orangered;opacity: 0.6;">ContactsBank</h3>
+          <p>Bank Your Contacts.</p>
+      </div>
+      <div>
+        <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Quick Links</h6>
+
+        <nav>
+
+          <ul>
+              <li>hiii</li>
+              <li>hdhdhhdh</li>
+              <li>hsjhshshh</li>
+              <li>jjdjdjd</li>
+          </ul>
+
+        </nav>
+      </div>
+      <div>
+        <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Social Media</h6>
+          <ul>
+              <li>heloo</li>
+              <li>kdkdkdk</li>
+              <li>ldlld</li>
+              <li>kskdkkdk</li>
+  
+          </ul>
+      </div>
+  
+      <div style="text-align: center;margin-left:80px;margin-top: 30px;">
+          <p>Designed By KINGSLEY AIGOJIE &copy;2022</p>
+       </div>
+  
+  </div>
+  </div>
+  
+
 
 {% endblock %}

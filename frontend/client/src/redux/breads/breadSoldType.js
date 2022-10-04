@@ -1,0 +1,1 @@
+export const BREAD_SOLD="BREAD_SOLD"

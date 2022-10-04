@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <title>React App</title>
+    <style>
+
+.preload{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+	width: 100vw;
+	height: 100vh;
+	
+	background:white;
+}
+.loade{
+  -webkit-animation: load 1s infinite ease-in-out;
+  animation: load 1s infinite ease-in-out;
+  width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 480px;
+	left: 850px;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 50%;
+	
+}
+
+@keyframes load{
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid orangered;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid wheat;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+h1{
+  color:orangered;
+  text-shadow: #242333;
+  position: absolute;
+  top: 350px;
+	left: 750px;
+  border-radius:18px;
+  padding:10px;
+  border:none;
+  box-shadow:1px 1px 4px black;
+
+}
+
+h2{
+  text-shadow: #242333;
+  position: absolute;
+  top: 420px;
+	left: 790px;
+  font-size: 16px;
+
+}
+@media(max-width:768px){
+  
+  h1{
+    position: absolute;
+    top:320px;
+    left:160px;
+  }
+  h2{
+    position: absolute;
+    top:390px;
+    left: 200px;
+  }
+  .preload .loade{
+
+    position: absolute;
+    top:460px;
+    left: 260px;
+
+  }
+  body{
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+ 
+}
+</style>
+   
+  </head>
+  <body style="background-color: rgba(255,255,255,0.25);">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <h1 id="spin">KingsBlog.</h1>
+    <h2 id="djspinner">...the place of Enlightenments.</h2>
+    <div class="preload" id="spinner">  
+      <div class="loade">
+      </div>
+
+      
+    </div>  
+    <div id="root">
+    </div>
+   
+  </body>
+</html>

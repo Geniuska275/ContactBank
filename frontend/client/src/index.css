@@ -1,0 +1,397 @@
+body{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+  color:#808080;
+
+  font-family: "Nuecha",cursive;
+}
+
+
+
+.whats{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 290px;
+  bottom:60px ;
+  right:10px;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 40px;
+  z-index: 3000;
+}
+
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  margin: 0 10px;
+  transform:rotate(90deg);
+  
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:white;
+  transition: .4s;
+  border-radius: 34px;
+  border:1px solid orangered;
+  opacity: 0.6;
+}
+.switch input{
+  display: none;
+}
+
+.slider:before{
+  position: absolute;
+  content: " ";
+  height: 20px; 
+  width: 20px;
+  left:5px;
+  bottom:5px;
+  background-color: orangered;
+  transition: 0.4s;
+  border-radius: 60px;
+  color:black;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0.6;
+}
+input:checked + .slider{
+  background-color:black;
+}
+
+input:checked + .slider:before{
+  transform: translateX(50px);    
+}
+
+.mode{
+  background-color:black;
+  color:white;
+}
+
+/*navbar*/
+
+.navbar{
+  position: sticky;
+  z-index: 2000;
+  top:0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color:rgba(255, 255, 255, 0.9);
+  color:#333;
+  box-shadow: 5px 5px 15px rgba(17, 47, 216, 0.2); 
+         
+
+}
+.brand-title{
+  font-size: 1.5rem;
+  margin:0.5rem;
+}
+.nav-links ul{
+  margin:0;
+  padding:0;
+  display: flex;
+  text-decoration: none;
+}
+
+.nav-links ul li {
+  list-style: none;
+  text-decoration: none;
+  color:#333;
+  padding:1rem;
+  display: block;   
+}
+.nav-links ul li:hover{
+  background-color:orangered;
+  text-transform: uppercase;
+  color: white;
+}
+
+.success{
+  background-color: #333;
+  color: #808080;
+  padding: 10px;
+  border-radius: 5px;
+}
+.blur{
+  background-color: rgba(255, 255, 255, 0.25);
+  border:1px solid rgba(255, 255, 255, 0.40);
+  padding:80px;
+}
+.success:hover{
+  color:orangered;
+}
+.disabled{
+  background-color: #808080;
+  color:white
+}
+.card{
+  margin:auto;
+  margin-top:20px;
+  box-shadow: 5px 5px 15px rgba(17, 47, 216, 0.2);
+  width:800px;
+  height: 400px;
+  border-radius: 10px; 
+  
+
+}
+p{
+  color:red;
+  width: 100%;
+}
+h3{
+  padding:10px;
+  border-bottom: 4px solid orangered;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+}
+.body{
+  margin: auto;
+  width: 700px;
+  height: 100px;
+
+}
+
+.Addblogs{
+  margin:auto;
+  width: 500px;
+  height:400px;
+  box-shadow: 5px 5px 15px rgba(17, 47, 216, 0.2); 
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 40px;
+
+}
+.form{
+  margin-top: 100px;
+}
+input{
+  padding: 10px;
+  width: 300px;
+  border: 2px outset orangered;
+  border-radius: 10px;
+}
+textarea{
+  padding: 10px;
+  width: 300px;
+  border: 2px outset orangered;
+  border-radius: 10px;
+}
+.buttonStyles{
+  margin-top: 20px;
+  padding:20px;
+  border:none;
+  border-radius: 10px;
+  background-color: orangered;
+  width: 300px;
+  color:white;
+}
+.buttonStyles:hover{
+  background-color: #808080;
+
+}
+h5{
+  color:orangered;
+  margin-top: 30px;
+  font-weight: 800;
+  font-size: 30px;
+}
+.stores{
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-area: 20px;
+}
+.center{
+  text-align: center;
+  
+
+}
+h4{
+  text-align: center;
+  color:brown;
+  opacity: 0.8;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+button{
+  color:#333;
+  background-color: orangered;
+  border: none;
+  border-radius: 10px;
+  padding:20px;
+  margin-top: 10px;
+  width: 200px;
+}
+button:hover{
+  background-color: brown;
+  color:white;
+  text-transform: uppercase;
+}
+
+/*loader*/
+
+.load{
+  -webkit-animation: load 1s infinite ease-in-out;
+  animation: load 1s infinite ease-in-out;
+  width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 1000px;
+	left: 830px;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 50%;
+	
+}
+.loader{
+  -webkit-animation: load 1s infinite ease-in-out;
+  animation: load 1s infinite ease-in-out;
+  width: 200px;
+	height: 200px;
+	position: absolute;
+	top: 480px;
+	left: 850px;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 50%;
+	
+}
+.preloader{
+  margin-top: 20px;
+  padding:20px;
+  border:none;
+  border-radius: 10px;
+  background-color: #808080;
+  margin-left: 80px;
+  width: 300px;
+  color:white;
+
+}
+
+@keyframes load{
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid orangered;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid wheat;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+
+.Homepage{
+  background-color: #333;
+  padding: 150px;
+  text-align: center;
+  border-bottom: 14px outset orangered;
+  box-shadow: 5px 5px 15px rgba(17, 47, 216, 0.2);
+  background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.7)),url("/public/jangle1.jpg")no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.Homepage h4{
+  color:orangered;
+  font-size: 32px;
+}
+small{
+  color:#f44336;
+}
+.validbtn{
+  width: 300px;
+  background-color: #808080;
+  padding: 10px;
+}
+
+.footer{
+  padding: 30px;
+  text-align: center;
+  background-color: #333;
+  color: aliceblue;
+}
+
+.fade{
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: orangered;
+  border: none;
+  color: beige;
+}
+.fade:hover{
+  background-color: orangered;
+  opacity: 0.4;
+}
+
+.About{
+  margin-top: 80px;
+  margin-bottom: 240px;
+  text-align: center;
+}
+.brand-title{
+  font-size: large;
+}
+.Link{
+  text-decoration: none;
+
+}
+.vali{
+
+  width: 300px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: silver;
+  border: none;
+  color: beige;
+
+}
+
+@media(max-width:768px){
+  .search,.success{
+    display: none;
+
+  }
+  .blogs .card{
+    width: 400px;
+    height: 300px;
+  
+  }
+  .stores{
+    grid-template-columns: repeat(1 ,1fr);
+  }
+  .stores .card{
+    width: 500px;
+    height: 400px;
+
+  }
+  
+
+}

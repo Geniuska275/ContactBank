@@ -1,0 +1,91 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>ContactsBank. | searches</title>
+
+{% endblock%}
+{% block body %}
+    
+    <nav class="navbar">
+        <a href="/" style="text-decoration: none;color: black;"> <div class="brand-title">ContactsBank.</div></a>
+         <a href="#" class="toggle-button">
+             <span class="bar"></span>
+             <span class="bar"></span>
+             <span class="bar"></span>
+         </a>
+         <div class="nav-links">
+             <ul>
+                 <li><a href="/Contacts">Contacts</a></li>
+                 <li><a href="/AddContacts">AddContacts</a></li>
+                 <li><a href="/About">About</a></li>
+             </ul>
+         </div>
+     </nav>
+     <!--mode-->
+     
+     <div class="whats">
+         <label  class="switch" >
+             <input type="checkbox" class="clicked">
+             <span class="slider"></span>
+         </label>
+       </div>
+
+       <div class="container a" style="margin: 60px;">
+           <div class="card" style="padding: 60px;text-align: center;">
+               <h1>Enter {{user.username}}'s passcode.</h1>
+               <form method="POST" action="/passcode" style="margin-top: 10px;">
+    
+                <input type="text" name="username" value={{user.username}} placeholder="enter passcode..." style="margin: 20px;" readonly hidden>
+                   <label>passcode:</label>
+                   <input type="text" name="passcode" placeholder="enter passcode..." style="margin: 20px;">
+                   <input type="submit" value="submit passcode" class="success">
+               </form>
+           </div>
+       </div>
+   
+
+
+    
+    <!---footer-->
+<div class="foot" style="margin-top:40px;">
+
+    <div class=" grid grid-3 container mt-3">
+        <div>
+            <h3 style="color:orangered;opacity: 0.6;">ContactsBank</h3>
+            <p>Bank Your Contacts.</p>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Quick Links</h6>
+  
+          <nav>
+  
+            <ul>
+                <li>hiii</li>
+                <li>hdhdhhdh</li>
+                <li>hsjhshshh</li>
+                <li>jjdjdjd</li>
+            </ul>
+  
+          </nav>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Social Media</h6>
+            <ul>
+                <li>heloo</li>
+                <li>kdkdkdk</li>
+                <li>ldlld</li>
+                <li>kskdkkdk</li>
+    
+            </ul>
+        </div>
+    
+        <div style="text-align: center;margin-left:80px;margin-top: 30px;">
+            <p>Designed By KINGSLEY AIGOJIE &copy;2022</p>
+         </div>
+    
+    </div>
+    </div>
+    
+
+{% endblock %}

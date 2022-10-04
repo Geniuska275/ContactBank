@@ -1,0 +1,24 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "author": "kingsley Aigbojie",
+      "body": "lorem ahahahahahhahahah hdhdhdhdhdhdhdhdhd lslslsls"
+    },
+    {
+      "id": 2,
+      "author": "esther Aigbojie",
+      "body": "lorem ahahahahahhahahah hdhdhdhdhdhdhdhdhd lslslsls"
+    },
+    {
+      "id": 3,
+      "author": "kingsley Aigbojie",
+      "body": "lorem ahahahahahhahahah hdhdhdhdhdhdhdhdhd lslslsls"
+    },
+    {
+      "id": 4,
+      "author": "Martins Aigbojie",
+      "body": "lorem ahahahahahhahahah hdhdhdhdhdhdhdhdhd lslslsls"
+    }
+  ]
+}

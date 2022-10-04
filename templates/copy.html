@@ -1,0 +1,67 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>ContactsBank | copy_contacts</title>
+
+{% endblock%}
+{% block body %}
+
+
+<h4>Welcome to ContactsBank!  Save your contacts to the Cloud.</h4>
+    <!---navbar--> 
+    <nav class="navbar">
+       <a href="/" style="text-decoration: none;color: black;"> <div class="brand-title">ContactsBank.</div></a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/Contacts">Contacts</a></li>
+                <li><a href="/AddContacts">AddContacts</a></li>
+                <li><a href="/Users">Users</a></li>
+                <li><a href="/About">About</a></li>
+               
+            </ul>
+        </div>
+        <form class="suc" method="POST" action="/search">
+            <input style="padding: 10px;" name="searched" placeholder="Search a User..." aria-label="Search">
+            <button class="success" type="submit">Search</button>
+        </form>
+    </nav>
+    <!--mode-->
+    
+    <div class="whats">
+        <label  class="switch" >
+            <input type="checkbox" class="clicked">
+            <span class="slider"></span>
+        </label>
+      </div>
+
+
+  {%if message|safe %}
+  <h5>{{messages}}</h5>
+
+  {%endif%}
+<div class="cont">
+        <div class="label">
+            joining link
+        </div>
+        {%for contact in contacts%}
+        <div class="copy-text">
+            <input type="text" class="text" value={{contact.number}}>
+            <button class="button">copy</button>
+        </div>
+        {%endfor%}
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

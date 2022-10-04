@@ -1,0 +1,129 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>Contacts</title>
+
+{% endblock%}
+{% block body %}
+
+
+<h4>Welcome to ContactsBank!  Save your contacts to the Cloud.</h4>
+    <!---navbar--> 
+    <nav class="navbar">
+       <a href="/" style="text-decoration: none;color: black;"> <div class="brand-title">ContactsBank.</div></a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/Contacts">Contacts</a></li>
+                <li><a href="/AddContacts">AddContacts</a></li>
+                <li><a href="/UpdateContacts">Users</a></li>
+                <li><a href="/About">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--mode-->
+    
+    <div class="whats">
+        <label  class="switch" >
+            <input type="checkbox" class="clicked">
+            <span class="slider"></span>
+        </label>
+      </div>
+
+
+  {%if message|safe %}
+  <h5>{{messages}}</h5>
+
+  {%endif%}
+<div class="center">
+    <table >
+        <tr>
+            <th>FIRSTNAME</th>
+            <th>LASTNAME</th>
+            <th>CONTACT</th>
+            <th>images</th>
+            <th>mime_type</th>
+
+            <th>DATE_CREATED</th>
+            <th colspan="2" ></th>
+      
+          </tr>
+          {% for user in users%}
+          <tr>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.image}}</td>
+            <td>{{user.mime_type}}</td>  
+             
+
+            <td>{{user.Date_created.date()}}</td>
+            <td><a href="/delete/{{user.id}}"><button id="te">delete</button></a>
+            <a href="/updateUser/{{user.id}}"><button id="ta">Edit</button></a>
+            <a href="/viewcontacts/{{user.id}}"><button id="ta">view contacts</button></a>
+            <a href="/userprofile/{{user.id}}"><button id="ta">profile</button></a>
+             
+      
+          
+            </td>
+      
+          </tr>
+      
+          {%endfor%}
+      </table>
+</div>
+
+
+
+
+
+
+
+<!---footer-->
+<div class="foot">
+
+    <div class=" grid grid-3 container mt-3">
+        <div>
+            <h3 style="color:orangered;opacity: 0.6;">ContactsBank</h3>
+            <p>Bank Your Contacts.</p>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Quick Links</h6>
+  
+          <nav>
+  
+            <ul>
+                <li>hiii</li>
+                <li>hdhdhhdh</li>
+                <li>hsjhshshh</li>
+                <li>jjdjdjd</li>
+            </ul>
+  
+          </nav>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Social Media</h6>
+            <ul>
+                <li>heloo</li>
+                <li>kdkdkdk</li>
+                <li>ldlld</li>
+                <li>kskdkkdk</li>
+    
+            </ul>
+        </div>
+    
+        <div style="text-align: center;margin-left:80px;margin-top: 30px;">
+            <p>Designed By Brains &copy;2022</p>
+         </div>
+    
+    </div>
+    </div>
+    
+  
+
+{% endblock %}

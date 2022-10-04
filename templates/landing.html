@@ -1,0 +1,109 @@
+
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+
+
+<script src="{{url_for('static', filename='javascript/script.js')}}" defer></script>
+
+<!-- jQuery library -->
+
+</head>
+<body>
+    <h4>Welcome to ContactsBank!  Save your contacts to the Cloud.</h4>
+    <!---navbar--> 
+    <nav class="navbar">
+        <div class="brand-title">StackmyContacts.</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/About">About</a></li>
+                <li><a href="/signed">Signedup</a></li>
+                <li><a href="/logout">logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--mode-->
+    
+      <div class="whats">
+        <label  class="switch" >
+            <input type="checkbox" class="clicked">
+            <span class="slider"></span>
+        </label>
+      </div>
+       
+      
+        <h1>Welcome ,{{user}}</h1>
+       <div class="landing">
+        <div class="stack">
+          <h1>STACKMYCONTACTS</h1>
+          <P>Stacking Ur Contacts for You.</P>
+        </div>
+       </div>
+      
+      <div class="container" style="text-align:center ;color:gray;">
+        <h1>About US</h1>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officiis? Minima, perferendis. Qui ex magnam maxime ipsam possimus nulla. Quia dicta totam omnis culpa exercitationem facilis sapiente! Doloribus, soluta dolores!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta dolore, minima nemo nihil doloribus dolores doloremque totam earum maiores tempora facere, repellat itaque est rem fugiat<br> voluptatem. Earum, tempore mollitia.</p>
+        </div>
+
+
+      </div>
+
+      <!---footer-->
+      <div class="foot">
+          
+          <div class=" grid grid-3 container mt-3">
+              <div>
+                  <h3 style="color:orangered;opacity: 0.6;">ContactsStack</h3>
+                  <p>Bank Your Contacts.</p>
+                </div>
+                <div>
+                    <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Quick Links</h6>
+                    <nav>
+                        
+                        <ul>
+                            <li>hiii</li>
+                            <li>hdhdhhdh</li>
+                            <li>hsjhshshh</li>
+                            <li>jjdjdjd</li>
+                        </ul>
+                        
+                        
+                    </nav>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Social Media</h6>
+          <ul>
+              <li>heloo</li>
+              <li>kdkdkdk</li>
+              <li>ldlld</li>
+                <li>kskdkkdk</li>
+    
+            </ul>
+        </div>
+    
+        <div style="text-align: center;margin-left:80px;margin-top: 30px;">
+            <p>Designed By Brains &copy;2022</p>
+         </div>
+    
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

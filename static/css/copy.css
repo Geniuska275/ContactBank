@@ -1,0 +1,39 @@
+
+   .cont{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+    .label{
+        padding: 10px;
+        font-size: 18px;
+        color:#111;
+    }
+    
+    .copy-text{
+        position: relative;
+        display: flex;
+        border-radius: 10px;
+        border:1px solid #ddd;
+        background: #fff;
+        padding: 10px;
+    }
+    .copy-text input.text{
+        padding: 10px;
+        color:#555;
+        font-size: 18px;
+        border:none;
+        outline:none;  
+    }
+    .copy-text button{
+        cursor: pointer;
+        background: #5784f5;
+        color:#fff;
+        border: none;
+        outline:none;
+        padding:0px;
+        border-radius: 10px;
+    }
+
+   

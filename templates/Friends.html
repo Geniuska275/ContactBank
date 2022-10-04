@@ -1,0 +1,140 @@
+{% extends 'base.html' %} 
+
+
+{%block head %}
+<title>Contacts</title>
+
+{% endblock%}
+{% block body %}
+
+
+<h4>Welcome to ContactsBank!  Save your contacts to the Cloud.</h4>
+    <!---navbar--> 
+    <nav class="navbar">
+       <a href="/" style="text-decoration: none;color: black;"> <div class="brand-title">StackmyContacts.</div></a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/stack/family">Family</a></li>
+                <li><a href="/stack/friends">Friends</a></li>
+                <li><a href="/stack/stranger">Stranger</a></li>
+                <li><a href="/stack/business">Business</a></li>
+                <li><a href="/stack/church">church</a></li>
+                <li><a href="/stack/mosque">Mosque</a></li>
+                <li><a href="/stack/spouse">Spouse</a></li>
+
+
+               
+            </ul>
+        </div>
+        <div class="g" style="box-shadow:5px 5px 15px rgba(17,47,216,0.2);border-radius: 50px;padding: 10px;">
+            <form class="suc" method="POST" action="/search">
+              <input style="padding: 10px;" name="searched" placeholder="Search a User..." aria-label="Search">
+              <button class="success" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+          </div>
+    </nav>
+    <!--mode-->
+    
+    <div class="whats">
+        <label  class="switch" >
+            <input type="checkbox" class="clicked">
+            <span class="slider"></span>
+        </label>
+      </div>
+
+      
+      {%if length == 0 %}
+
+      <h1> sorry there are no contacts in this stack</h1>
+      
+      {%endif%}
+
+      {%if message|safe %}
+      <h5>{{messages}}</h5>
+      
+      {%endif%}
+    </div>
+    <div>
+        <div class=" container  grid-3" style="margin-top: 20px;margin-bottom: 270px;">
+            {% for contact in contacts%}
+            <div class="lengths">
+              <span style="color:orangered;">{{length}}</span>
+            </div>
+            <div class="contact">
+                
+                <a href="https://wa.me/{{contact.number}}" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+                <h1>{{contact.firstname}} {{contact.lastname}}</h1>
+                <h2>{{contact.number}}</h2>
+                <small>Date_added:{{contact.Date_Created.date()}}</small><br>
+                <small style="font-weight:900 ;">stack:{{contact.stack}}</small>
+    
+    
+                <div class="b">
+                    <a href="tel:{{contact.number}}"><button class="btn"><i class="fa fa-phone"></i></button></a>
+                    <td><a href="/delete/{{contact.id}}"><button id="te"><i class="fa fa-trash"></i></button></a>
+                        
+                        
+                        <a href="/update/{{contact.id}}"><button class="btn"><i class="fa fa-edit"></i></button></a>
+                </div>
+        
+              </div>
+              {%endfor%}
+            </div>
+    
+    </div>
+    
+
+
+
+
+
+
+
+<!---footer-->
+<div class="foot">
+
+    <div class=" grid grid-3 container mt-3">
+        <div>
+            <h3 style="color:orangered;opacity: 0.6;">ContactsBank</h3>
+            <p>Bank Your Contacts.</p>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Quick Links</h6>
+  
+          <nav>
+  
+            <ul>
+                <li>hiii</li>
+                <li>hdhdhhdh</li>
+                <li>hsjhshshh</li>
+                <li>jjdjdjd</li>
+            </ul>
+  
+          </nav>
+        </div>
+        <div>
+          <h6 style="color: orangered;opacity: 0.6;font-size: 20px;margin-bottom: 10px;">Social Media</h6>
+            <ul>
+                <li>heloo</li>
+                <li>kdkdkdk</li>
+                <li>ldlld</li>
+                <li>kskdkkdk</li>
+    
+            </ul>
+        </div>
+    
+        <div style="text-align: center;margin-left:80px;margin-top: 30px;">
+            <p>Designed By KINGSLEY AIGOJIE &copy;2022</p>
+         </div>
+    
+    </div>
+    </div>
+    
+  
+
+{% endblock %}
